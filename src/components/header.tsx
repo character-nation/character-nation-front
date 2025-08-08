@@ -1,11 +1,11 @@
-import { Logo } from "@/assets";
-import Button from "./button";
+import { Logo } from '@/assets';
+import Button from './button';
 
 export const Header = () => {
   return (
-    <div className="w-full h-14 border-b border-gray-100 flex items-center justify-center">
-      <header className="flex justify-between h-full items-center w-320">
-        <Logo className="w-7 h-7" />
+    <div className="flex h-14 w-full items-center justify-center border-b border-gray-100">
+      <header className="flex h-full w-320 items-center justify-between">
+        <Logo className="h-7 w-7" />
         <div className="flex justify-center gap-2">
           <Button variant="ghost" size="sm">
             회원가입

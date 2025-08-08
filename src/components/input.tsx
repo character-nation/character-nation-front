@@ -20,7 +20,7 @@ export const Input = ({
   value,
   defaultValue,
   onChange,
-  type = "text",
+  type = 'text',
   name,
   placeholder,
   disabled,
@@ -28,7 +28,7 @@ export const Input = ({
   readOnly,
   autoFocus,
   maxLength,
-  className = "",
+  className = '',
   label,
   error,
   fullWidth,
@@ -39,16 +39,16 @@ export const Input = ({
     hover:bg-white hover:border-gray-200
     focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent
     disabled:bg-gray-100 disabled:cursor-not-allowed disabled:opacity-50
-    ${error ? "border-red-500 focus:ring-red-500" : "border-gray-300"}
-    ${fullWidth ? "w-full" : ""}
+    ${error ? 'border-red-500 focus:ring-red-500' : 'border-gray-300'}
+    ${fullWidth ? 'w-full' : ''}
   `.trim();
 
   return (
-    <div className={`${fullWidth ? "w-full" : ""}`}>
+    <div className={`${fullWidth ? 'w-full' : ''}`}>
       {label && (
-        <label className="block text-sm font-medium text-gray-800 mb-2">
+        <label className="mb-2 block text-sm font-medium text-gray-800">
           {label}
-          {required && <span className="text-green-500 ml-1">*</span>}
+          {required && <span className="ml-1 text-green-500">*</span>}
         </label>
       )}
       <input
