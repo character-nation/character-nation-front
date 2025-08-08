@@ -1,6 +1,7 @@
 import Button from '@/components/button';
 import { Toggle } from '@/components/toggle';
 import { categoryData } from '@/constants/categories';
+import Link from 'next/link';
 
 export default function SignupCategoryPage() {
   return (
@@ -16,7 +17,9 @@ export default function SignupCategoryPage() {
         </div>
         <p className="text-xs text-[#6c6c6c]">하나 이상 선택해주세요. 이후 변경이 가능합니다.</p>
       </div>
-      <Button>완료</Button>
+      <Link href={'/'}>
+        <Button fullWidth>완료</Button>
+      </Link>
     </>
   );
 }
