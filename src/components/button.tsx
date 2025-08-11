@@ -14,7 +14,7 @@ type ButtonProps = {
 };
 
 const sizeClasses = {
-  sm: "px-[14px] py-2",
+  sm: "px-3 py-1.5 text-sm",
   md: "px-[14px] py-3",
   lg: "px-4 py-4",
 };
@@ -42,16 +42,14 @@ export default function Button({
       type={type}
       onClick={onClick}
       disabled={disabled || loading}
-      className={`
-        inline-flex items-center justify-center rounded-md transition-all font-medium text-base ${
-          sizeClasses[size]
-        } ${variantClasses[variant]} ${fullWidth && "w-full"} ${
-        disabled && "bg-[#e0e0e0] text-[#a0a0a0] cursor-not-allowed"
-      } ${loading && "bg-green-200 cursor-wait"}
-        `}
+      className={`inline-flex items-center justify-center rounded-md text-base font-medium transition-all ${
+        sizeClasses[size]
+      } ${variantClasses[variant]} ${fullWidth && "w-full"} ${
+        disabled && "cursor-not-allowed bg-[#e0e0e0] text-[#a0a0a0]"
+      } ${loading && "cursor-wait bg-green-200"} `}
     >
       {loading ? (
-        <span className="animate-spin mr-2 w-5 h-5 border-2 border-gray-900 border-t-transparent rounded-full" />
+        <span className="mr-2 h-5 w-5 animate-spin rounded-full border-2 border-gray-900 border-t-transparent" />
       ) : icon ? (
         <span className="mr-2">{icon}</span>
       ) : null}
